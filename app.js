@@ -12,7 +12,17 @@ app.set('views', './views'); // setting pug directory path
 
 // page routing and serving configurations
 app.get('/',(req,res)=>{
-    res.status(200).render('index.pug');
+    res.status(200).render('home.pug');
+})
+
+app.get('/contact',(req,res)=>{
+    res.status(200).render('contact.pug')
+})
+
+app.post('/contact',(req,res)=>{
+    // send data to database
+    console.log(req.body);
+    res.status(200).render('formSubmitSuccess.pug');
 })
 // starting server
 app.listen(port,()=>{

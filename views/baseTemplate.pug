@@ -1,0 +1,29 @@
+//- layout.pug
+html
+  head
+    title XYZ Programming Hub
+    block stylesBlock 
+    block scriptsBlock
+  body
+    section#sideBar
+            a(href="https://www.facebook.com" target='blank') 
+                img(src="../static/sideBarImages/fb.png", alt="")
+            a(href="https://www.linkedin.com/in/gagan-bhatia-83a85a214" target="blank") 
+                img(src="../static/sideBarImages/lnkdin.png", alt="")
+            a(href="https://www.twitter.com" target="blank") 
+                img(src="../static/sideBarImages/twitter.png", alt="")
+            a(href="https://www.github.com/GaganBhatia19" target='blank') 
+                img(src="../static/sideBarImages/github.png", alt="")
+    nav#navbar
+       ul 
+        li #[a(href="/")  Home]
+        li 
+            a(href="/services")  Services
+        li 
+            a(href="/about")  About Us
+        li #[a(href="/contact")  Contact Us]
+        
+    block contentBody
+
+    footer#footer
+        | © Developed 👨‍💻 by Gagan Bhatia

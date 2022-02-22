@@ -1,0 +1,37 @@
+//- using template inheritance
+extends baseTemplate.pug
+
+//- block helps in injecting this in our base template pug file
+block scriptsBlock
+    script(src="../static/script.js")
+block stylesBlock 
+    style 
+        include ../static/style.css
+
+block contentBody 
+    section#pictureSection 
+            div#welcomeContainer
+                | Welcome to XYZ Programming Classes
+            div#descriptionCont
+                | Eat Sleep Code Repeat
+    section#missionSection 
+        | Our Mission
+        div#cardCont
+            div.missionCard
+                h3 Making Coding Easy
+                p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium fuga optio officia eaque saepe possimus eligendi reiciendis unde quam. Ullam excepturi, id ratione a 
+            div.missionCard
+                h3 Hands On tutorial to Latest Technologies
+                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quis pariatur sapiente qui nostrum, nemo libero laudantium impedit autem nisi, molestiae alias. Archite
+            div.missionCard
+                h3 Producing Geeks
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem saepe explicabo deleniti hic, ipsum, adipisci molestiae totam eius laudantium autem quidem minus fuga labo
+    section#languageSection 
+        | Technologies Taught
+        div#languagePics
+            img(src="../static/languageImages/cpp.png", alt="")
+            img(src="../static/languageImages/java.png", alt="")
+            img(src="../static/languageImages/mngDB.png", alt="")
+            img(src="../static/languageImages/nodejs.png", alt="")
+            img(src="../static/languageImages/python.png", alt="")
+            img(src="../static/languageImages/rjs.png", alt="")

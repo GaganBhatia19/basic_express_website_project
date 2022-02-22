@@ -1,0 +1,14 @@
+include baseTemplate.pug
+
+block scriptsBlock
+    script(src="../static/script.js")
+block stylesBlock 
+    style   
+        include ../static/style.css
+        include ../static/styleContact.css
+
+block contentBody 
+    div.container
+        h1 Your Form Has Been submitted successfully
+        h2 We will contact you soon...
+        a(href="/") Back to home page 
