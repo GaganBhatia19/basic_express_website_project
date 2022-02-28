@@ -5,7 +5,10 @@ const port = process.env.PORT || 80; // process.env.PORT will be the port addres
 // importing mongoose
 const mongoose = require('mongoose');
 //path to database
-mongoose.connect('mongodb://localhost/xyzprogramminghubDatabase').then(() => console.log('connected to database successfully')).catch(() => console.log("can't connect to database"));// promise
+// connecting to heroku app dynamic database
+mongoose.connect(process.env.MONGODB_URI||'mongodb://localhost/xyzprogramminghubDatabase').then(() => console.log('connected to database successfully')).catch(() => console.log("can't connect to database"));// promise
+
+module.exports = {mongoose};
 
 // Express related configurations
 app.use(express.urlencoded()); // using url encoder middleware
