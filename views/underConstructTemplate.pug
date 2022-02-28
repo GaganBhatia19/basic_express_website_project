@@ -1,0 +1,16 @@
+extends baseTemplate.pug
+
+block stylesBlock 
+    style
+        include ../static/style.css
+        include ../static/styleUnderConstruct.css
+
+block scriptsBlock 
+    script(src="../static/script.js") 
+
+block contentBody
+    div#constructionContainer
+        div#constructImg
+            img(src="../static/others/construction.png", alt="", srcset="")
+        section#constructMsg 
+            | Sorry...#{pageName} page is under construction

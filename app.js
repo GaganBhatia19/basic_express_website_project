@@ -55,6 +55,14 @@ app.post('/contact', (req, res) => {
     // if we send any message or render any pug template then we send using status 200 so by callback if any error comes then the error in server will also come.
     // so don't change status over here change inside the callback
 })
+
+// "services" page and "about us" page 
+app.get('/about',(req,res)=>{
+    res.status(200).render('underConstructTemplate.pug',{'pageName':'About'});
+})
+app.get('/services',(req,res)=>{
+    res.status(200).render('underConstructTemplate.pug',{'pageName':'Services'});
+})
 // starting server
 app.listen(port, () => {
     console.log('running on local host');
